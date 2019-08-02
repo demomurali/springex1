@@ -5,8 +5,9 @@
 	http://www.springframework.org/schema/beans/spring-beans.xsd 
 	http://www.springframework.org/schema/context 
 	http://www.springframework.org/schema/context/spring-context.xsd">
-	
-	<bean id="car123" 	class="com.example.firstSpringApp.Car"></bean>
-	<bean id="bike" class="com.example.firstSpringApp.Bike"></bean>
+
+	<bean id="car123" 	class="com.example.firstSpringApp.Car" scope="prototype"></bean>
+	<bean id="bike" class="com.example.firstSpringApp.Bike" ></bean>
+	<bean id="raceCar" 	class="com.example.firstSpringApp.RaceCar" ></bean>
 
 </beans> 

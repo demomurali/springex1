@@ -8,17 +8,43 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 //@SpringBootApplication
 public class Test {
 		public static void main(String[] args) {
+			// UI html
+			// spring DI and IOC
+			// setter injection and setter injection
 			
 			// container ---> our java object
 			// new
-	ApplicationContext applicationContext=new ClassPathXmlApplicationContext("spring.xml");
-			
-			Vehicle veh=(Vehicle)applicationContext.getBean(args[0]);
+			// configuation ---> bean
+			// com.pack1.Car --->car
+			//   com.pack1.Bike --> bike
+			// factory Car and bike
+			// both car and bike object are created
+			// scope --> singleton
+			// beans are created
+			System.out.println("before the container");
+			ApplicationContext applicationContext=new ClassPathXmlApplicationContext("spring.xml");
+			System.out.println("after the container");
+			Vehicle veh=(Vehicle)applicationContext.getBean("car123");
 			veh.start();
+			System.out.println("after the get method 1" + veh);
+
+			veh=(Vehicle)applicationContext.getBean("car123");
+			veh.start();
+			System.out.println("after the get method 2" + veh);
+
+			/*
+			System.out.println(veh);
+			
+			veh=(Vehicle)applicationContext.getBean("bike");
+			System.out.println(veh);
+			
+			veh.start();
+			
+			
 			//Vehicle vehicle=new Bike();
 			//vehicle.start();
-			
-			
 			//SpringApplication.run(FirstSpringAppApplication.class, args);
+		
+*/		
 		}
 }
