@@ -1,13 +1,15 @@
 package com.example.firstSpringApp;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
 public class Car implements Vehicle{
 
+	// both byType and byName
+	@Autowired
+	private Engine engine1;
 	
-	private Engine engine;
-	
-	@Value("sedan")
+	@Value("luxury")
 	private String model;
 	
 	
@@ -19,12 +21,12 @@ public class Car implements Vehicle{
 		this.model = model;
 	}
 
-	public Engine getEngine() {
-		return engine;
+	public Engine getEngine1() {
+		return engine1;
 	}
 
-	public void setEngine(Engine engine) {
-		this.engine = engine;
+	public void setEngine1(Engine engine) {
+		this.engine1 = engine;
 	}
 
 	public Car(){
@@ -32,7 +34,8 @@ public class Car implements Vehicle{
 	}
 	
 	public void start(){
-		engine.startEngine();
+		System.out.println(this.model);
+		engine1.startEngine();
 		
 	}
 	

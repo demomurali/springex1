@@ -6,16 +6,17 @@
 	http://www.springframework.org/schema/context 
 	http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean id="car123" 	class="com.example.firstSpringApp.Car" autowire="byName">
-		<property name="model" value="sedan"></property>
+	<context:annotation-config></context:annotation-config>
+
+	<bean id="car123" 	class="com.example.firstSpringApp.Car">
 	</bean>
 
-	<bean id="bike" class="com.example.firstSpringApp.Bike">
+	<bean id="engine1" class="com.example.firstSpringApp.Bike">
 		<constructor-arg index="0" value="150cc"></constructor-arg>
 		<constructor-arg index="1"  ref="raceCarEngine"></constructor-arg>
 	</bean>
 	<bean id="raceCar" 	class="com.example.firstSpringApp.RaceCar" ></bean>
-	<bean id="engine" class="com.example.firstSpringApp.EngineImpl"></bean>
+	  <bean id="engine" class="com.example.firstSpringApp.EngineImpl"></bean>
 	 <bean id="raceCarEngine" class="com.example.firstSpringApp.RaceCarEngine" ></bean>
 
 
