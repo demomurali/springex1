@@ -1,8 +1,13 @@
 package com.example.firstSpringApp;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class Car implements Vehicle{
 
+	
 	private Engine engine;
+	
+	@Value("sedan")
 	private String model;
 	
 	
