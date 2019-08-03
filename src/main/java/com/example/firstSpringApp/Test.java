@@ -26,12 +26,11 @@ public class Test {
 			System.out.println("after the container");
 			Vehicle veh=(Vehicle)applicationContext.getBean("car123");
 			veh.start();
-			System.out.println("after the get method 1" + veh);
-
-			veh=(Vehicle)applicationContext.getBean("car123");
-			veh.start();
-			System.out.println("after the get method 2" + veh);
-
+			
+			
+			
+			
+			
 			/*
 			System.out.println(veh);
 			
